@@ -7,7 +7,9 @@ import pandas as pd
 
 def rename_column(name: str) -> str:
     if name.startswith("took_"):
-        return name[5:]
+        name = name[5:]
+    if name == "rust":
+        name = "python & rust"
     return name
 
 
@@ -22,17 +24,17 @@ def main(fn: str, out_dir: str) -> None:
 
     for direction, df in results_by_direction.items():
         df.loc[:, "name"] = df["name"].str[:-3]
-        df = df.assign(speedup=df["python"] / df["rust"])
+        df = df.assign(speedup=df["python"] / df["python & rust"])
 
         fig, ax2 = plt.subplots()
         df.plot(
             x="name",
-            y=["python", "rust"],
+            y=["python", "python & rust"],
             ax=ax2,
             kind="bar",
             title=direction,
-            xlabel="Workload",
-            ylabel="Time [s]",
+            xlabel="workload",
+            ylabel="time [s]",
             logy=True,
             rot=45,
         )
