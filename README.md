@@ -15,7 +15,7 @@ Further, each workload is parameterized along two dimensions:
 In particular, this means:
  * Deserialization of `NxM`: The query produces `M` records with 1 column containing a list of `N` pieces of data.  
    In this case, the data was chosen to be the string `"qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNMM"`.
- * Serialization of `NxM`: The query is submitted with a parameter that's an `N` long list with `M` elements each.  
+ * Serialization of `NxM`: The query is submitted with a parameter that's an `N` long list of lists with `M` elements each.  
    In this case, the elements were chosen to be the string `"qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNMM"`.
 
 Each workload is repeated multiple times simply summing up the time take to get more stable results.
