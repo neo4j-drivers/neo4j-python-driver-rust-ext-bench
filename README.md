@@ -28,7 +28,7 @@ Here are the results of running the benchmark on my machine (Lenovo p1 Gen. 3, I
 
 ![serialization plot, see also our_results/result.csv](our_results/serialization.png)
 
-For a discussion of the results, see the blog post at [https://medium.com/p/7059c56e8674](https://medium.com/p/7059c56e8674).
+For a discussion of the results, see the blog post at [https://medium.com/neo4j/neo4j-python-driver-10x-faster-with-rust-7059c56e8674](https://medium.com/neo4j/neo4j-python-driver-10x-faster-with-rust-7059c56e8674).
 
 
 ## Run It Yourself
